@@ -1,0 +1,7 @@
+fopen f "soubor.txt"
+push S "abc"
+fwrite f
+push I 1
+push I 2
+add I
+fwrite f
