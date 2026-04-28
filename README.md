@@ -47,28 +47,6 @@ py -3.13 main.py execute program.pjp
 py -3.13 main.py execute program.pjp --input input.txt
 ```
 
-## Aktualne podporovane suborove operacie v jazyku
-
-Priklad source programu:
-
-```c
-file f;
-fopen f "soubor.txt";
-fwrite f, "abc", 1 + 2;
-```
-
-Tento source sa preklada do instrukcii v style:
-
-```text
-fopen f "soubor.txt"
-push S "abc"
-fwrite f
-push I 1
-push I 2
-add I
-fwrite f
-```
-
 ## Poznamky
 
 - Po kazdej zmene `PJP.g4` treba znova spustit `py -3.13 generate_parser.py`.
